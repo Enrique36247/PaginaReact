@@ -1,0 +1,23 @@
+body {
+    font-family: 'Arial', sans-serif; /* Use a more friendly font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.header {
+    background-color: #0b4c75; /* Ejemplo de color */
+}
+
+/* Define la animación para los iconos */
+.icon {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Cambia el color de los iconos al pasar el ratón */
+.icon:hover {
+    color: #0b4c75; /* Mismo color que el header */
+    filter: brightness(1.2); /* Hace el color más brillante */
+}

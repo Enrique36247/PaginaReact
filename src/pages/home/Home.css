@@ -1,0 +1,19 @@
+.home-main {
+    margin-top: 100px; /* Agrega margen superior para crear espacio entre el header y el main */
+    padding-top: 120px; /* Add padding to avoid overlap */
+    padding-bottom: 150px; /* Increase padding to avoid overlap with footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-main h1, .home-main h2, .home-main h3 {
+    color: #333; /* Ensure text color is visible */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.home-main p {
+    text-align: center; /* Center the paragraph */
+    max-width: 800px; /* Optional: limit the width for better readability */
+}
