@@ -1,7 +1,12 @@
+import logo from "../../img/logo.png";
+import "./Header.css";
+
 function Header() {
+  
     return (
       <header>
-        <h1>Header</h1>
+        <img src={logo} />
+        <h1>GameFinder</h1>
       </header>
     );
   }
