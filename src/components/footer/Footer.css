@@ -1,5 +1,4 @@
 footer {
-    /* Remove position fixed to make footer non-fixed */
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -19,4 +18,31 @@ footer {
 
 .social-icons a:hover {
     color: #ccc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    footer {
+        padding: 8px 0;
+    }
+
+    .social-icons a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 5px 0;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-icons a {
+        font-size: 1em;
+        margin: 5px 0;
+    }
 }

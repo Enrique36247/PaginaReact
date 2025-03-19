@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Basket from './pages/basket/Basket';
 import Voley from './pages/voley/Voley';
-import Futbol from './pages/futbol/Futbol';
+import Futbol from './pages/futbol/futbol';
 
 function App() {
   return (

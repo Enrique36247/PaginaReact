@@ -1,24 +1,46 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './Review.css';
+import reviewsService from '../../services/reviews/reviewsService';
 
-const reviews = [
-    { name: 'John Doe', review: 'Great product!' },
-    { name: 'Jane Smith', review: 'Very useful and well made.' },
-    { name: 'Sam Johnson', review: 'Exceeded my expectations.' },
-    { name: 'Chris Lee', review: 'Good value for the price.' }
-];
+function Review() {
+  const [reviews, setReviews] = useState([]);
 
-const Review = () => {
-    return (
-        <div className='review-container'>
-            {reviews.map((review, index) => (
-                <div className='review' key={index}>
-                    <h3>{review.name}</h3>
-                    <p>{review.review}</p>
-                </div>
-            ))}
+  const findAllReviews = () => {
+    let allReviews = [];
+    reviewsService.getAllReviews()
+      .then((res) => {
+        res.forEach((d) => {
+          const key = d.key;
+          const data = d.val();
+          allReviews.push({
+            key: key,
+            name: data.name,
+            review: data.review,
+            value: data.value
+          });
+        });
+        setReviews([...allReviews]);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    findAllReviews();
+  }, []);
+
+  return (
+    <div className="review-container">
+      {reviews.map((review, index) => (
+        <div className="review" key={index}>
+          <h3>{review.name}</h3>
+          <p>{review.review}</p>
+          <p>Rating: {review.value}</p>
         </div>
-    );
-};
+      ))}
+    </div>
+  );
+}
 
 export default Review;
