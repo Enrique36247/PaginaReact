@@ -20,7 +20,6 @@ footer {
     color: #ccc;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     footer {
         padding: 8px 0;

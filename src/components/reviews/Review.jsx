@@ -31,7 +31,7 @@ function Review() {
   }, []);
 
   return (
-    <div className="review-container">
+    <div className="review-container" id='review'>
       {reviews.map((review, index) => (
         <div className="review" key={index}>
           <h3>{review.name}</h3>

@@ -7,9 +7,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 10px; /* Adjust padding */
+    padding: 5px 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 60px; /* Reduce height */
+    height: 60px;
 }
 
 .header-left {
@@ -24,7 +24,7 @@ header {
 }
 
 header img {
-    width: 50px; /* Reduce logo size */
+    width: 50px;
     height: 50px;
     margin: 5px;
     border-radius: 50%;
@@ -32,7 +32,7 @@ header img {
 }
 
 header h1 {
-    font-size: 1.8em; /* Reduce font size */
+    font-size: 1.8em;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -54,7 +54,7 @@ nav li {
 nav a {
     text-decoration: none;
     color: #fff;
-    font-size: 1em; /* Adjust link font size */
+    font-size: 1em;
 }
 
 nav a:hover {
@@ -65,7 +65,7 @@ nav a:hover {
     background: none;
     border: none;
     color: #fff;
-    font-size: 1em; /* Adjust button font size */
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -79,7 +79,7 @@ nav a:hover {
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Asegura que el menú se abra en columnas */
+    flex-direction: column;
 }
 
 .dropdown-menu li {
@@ -95,7 +95,17 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Responsive styles */
+.rss-icon {
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.rss-icon:hover {
+    color: #ff9900;
+}
+
 @media (max-width: 768px) {
     header {
         height: 50px;

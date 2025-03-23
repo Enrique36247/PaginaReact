@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif; /* Use a more friendly font */
+    font-family: 'Arial', sans-serif; 
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -8,16 +8,47 @@ body {
 }
 
 .header {
-    background-color: #0b4c75; /* Ejemplo de color */
+    background-color: #0b4c75; 
 }
 
-/* Define la animación para los iconos */
 .icon {
     transition: color 0.3s ease-in-out;
 }
 
-/* Cambia el color de los iconos al pasar el ratón */
 .icon:hover {
-    color: #0b4c75; /* Mismo color que el header */
-    filter: brightness(1.2); /* Hace el color más brillante */
+    color: #0b4c75; 
+    filter: brightness(1.2); 
+}
+
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    body {
+        font-size: 0.8rem;
+    }
+
+    .header {
+        padding: 5px;
+    }
+
+    .icon {
+        font-size: 1.2em;
+    }
 }

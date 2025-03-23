@@ -13,8 +13,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
-    background-color: #f9f9f9; /* Optional: Add a background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    background-color: #f9f9f9; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .review h3 {
@@ -25,4 +25,38 @@
 .review p {
     margin: 5px 0;
     color: #555;
+}
+
+
+@media (min-width: 1024px) {
+    .review-container {
+        gap: 30px;
+    }
+
+    .review {
+        padding: 15px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .review-container {
+        flex-wrap: wrap;
+    }
+
+    .review {
+        flex: 1 1 45%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .review-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .review {
+        flex: 1 1 100%;
+    }
 }

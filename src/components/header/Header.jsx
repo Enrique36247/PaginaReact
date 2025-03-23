@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from "../../img/logo.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { FaRss } from "react-icons/fa";
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,11 @@ function Header() {
             </li>
             <li>
               <Link to="/">Home</Link>
+            </li>
+            <li>
+              <a href="/src/components/rss/RSS.rss" target="_blank" className="rss-icon">
+                <FaRss />
+              </a>
             </li>
           </ul>
         </nav>

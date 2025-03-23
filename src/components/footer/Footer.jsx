@@ -1,10 +1,11 @@
 import { FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 import './Footer.css';
 
 function Footer() {
   return (
     <footer>
-      <p>© 2023 GameFinder. All rights reserved. Privacy and Cookies Policy | Terms of Sale</p>
+      <p>© 2023 GameFinder. All rights reserved. <Link to="/terms"> Terms and Conditions</Link></p>
       <div className="social-icons">
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="icon">
           <FaGithub className="icon" />

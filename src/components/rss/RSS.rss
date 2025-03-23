@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>GameFinder RSS Feed</title>
+    <link>http://localhost:5173/home</link>
+    <description>Stay updated with the latest reviews and sports information from GameFinder.</description>
+    <item>
+      <title>Reviews</title>
+      <link>http://localhost:5173/#reviews</link>
+      <guid isPermaLink="true">http://localhost:5173/#reviews</guid>
+      <description>Read the latest reviews from our users.</description>
+    </item>
+    <item>
+      <title>Sports</title>
+      <link>http://localhost:5173/#sports</link>
+      <guid isPermaLink="true">http://localhost:5173/#sports</guid>
+      <description>Explore the available sports and their details.</description>
+    </item>
+  </channel>
+</rss>
