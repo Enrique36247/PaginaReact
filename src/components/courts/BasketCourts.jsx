@@ -8,20 +8,24 @@ const initialBasketCourts = [
 
 function BasketCourts() {
   const [basketCourts, setBasketCourts] = useState(initialBasketCourts);
+  const [editingIndex, setEditingIndex] = useState(null);
+  const [formData, setFormData] = useState({ name: '', place: '', description: '' });
 
-  const addCourt = (court) => {
-    setBasketCourts([...basketCourts, court]);
+  const handleEdit = (index) => {
+    setEditingIndex(index);
+    setFormData(basketCourts[index]);
   };
 
-  const updateCourt = (index, updatedCourt) => {
+  const handleSave = () => {
     const updatedCourts = [...basketCourts];
-    updatedCourts[index] = updatedCourt;
+    updatedCourts[editingIndex] = formData;
     setBasketCourts(updatedCourts);
+    setEditingIndex(null);
+    setFormData({ name: '', place: '', description: '' });
   };
 
-  const deleteCourt = (index) => {
-    const updatedCourts = basketCourts.filter((_, i) => i !== index);
-    setBasketCourts(updatedCourts);
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -30,15 +34,24 @@ function BasketCourts() {
       <ul>
         {basketCourts.map((court, index) => (
           <li key={index}>
-            <h3>{court.name}</h3>
-            <p>Location: {court.place}</p>
-            <p>{court.description}</p>
-            <button onClick={() => deleteCourt(index)}>Delete</button>
-            <button onClick={() => updateCourt(index, { name: 'Updated Name', place: 'Updated Place', description: 'Updated Description' })}>Update</button>
+            {editingIndex === index ? (
+              <div>
+                <input name="name" value={formData.name} onChange={handleChange} placeholder="Name" />
+                <input name="place" value={formData.place} onChange={handleChange} placeholder="Place" />
+                <input name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
+                <button onClick={handleSave}>Save</button>
+              </div>
+            ) : (
+              <div>
+                <h3>{court.name}</h3>
+                <p>Location: {court.place}</p>
+                <p>{court.description}</p>
+                <button onClick={() => handleEdit(index)}>Edit</button>
+              </div>
+            )}
           </li>
         ))}
       </ul>
-      <button onClick={() => addCourt({ name: 'New Court', place: 'New Place', description: 'New Description' })}>Add Court</button>
     </div>
   );
 }
