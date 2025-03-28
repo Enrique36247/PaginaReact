@@ -33,7 +33,7 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/public/rss/RSS.rss" target="_blank" className="rss-icon">
+              <a href="/rss/RSS.xml" target="_blank" className="rss-icon">
                 <FaRss />
               </a>
             </li>

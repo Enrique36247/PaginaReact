@@ -27,3 +27,5 @@ Sports meetups with strangers can be a fun and rewarding experience. By followin
 
 ## Webside
 https://hola-c2eac.web.app/
+
+![imagen-feedread](/src/img/Captura%20de%20pantalla%202025-03-28%20193206.png)
